@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Quiz App</title>
+</head>
+<body class="bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center h-screen">
+    <div id="main-container" class="w-full flex flex-col items-center">
+        <button id="start-btn" class="bg-white p-4 text-2xl font-bold text-blue-500 shadow-md rounded-md">Start Quiz</button>
+
+        <div id="quiz-container" class="bg-white w-4/5 md:w-3/5 lg:w-2/4 rounded shadow p-4 mt-8 hidden">
+            <div class="flex justify-between items-center border-b pb-3.5 mb-4">
+                <h1 class="font-bold text-2xl">Quiz App</h1>
+                <p class="bg-blue-200 rounded-md px-3 py-1 text-lg" id="timer">
+                    <span id="timer-no">10</span> sec
+                </p>
+            </div>
+            <h2 id="question-container" class="text-lg font-semibold mb-4"></h2>
+            <div id="answer-container" class="flex flex-col gap-2"></div>
+            <div class="flex flex-col items-center mt-4">
+                <button id="next-button" class="bg-blue-600 px-4 py-2 text-lg text-white rounded-md shadow-sm hidden">Next</button>
+                <p class="text-gray-500 mt-2">
+                    <span id="number-of-ques">1</span> of <span id="total-ques">10</span> questions
+                </p>
+            </div>
+        </div>
+
+        <div id="result-container" class="bg-white w-4/5 md:w-3/5 lg:w-2/4 rounded shadow p-4 mt-8 hidden">
+            <h2 id="result-message" class="text-lg font-semibold mb-4"></h2>
+            <button id="retry-button" class="bg-blue-600 px-4 py-2 text-lg text-white rounded-md shadow-sm">Retry Quiz</button>
+        </div>
+        
+    </div>
+
+    <script type="module" src="./app.js"></script>
+</body>
+</html>
